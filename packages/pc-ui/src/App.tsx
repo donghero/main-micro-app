@@ -65,8 +65,9 @@ function App() {
     }, 0);
   }
   useEffect(() => {
-    const nodeDomain = getDomain(window.location.host);
-    // nodeDomain = getDomain("fl-reading.freelog.com");
+    // const nodeDomain = getDomain(window.location.host);
+    const nodeDomain = getDomain("djdj.testfreelog.com/");
+    console.log('不改动源码', nodeDomain)
     Promise.all([requestNodeInfo(nodeDomain), freelogAuth.getUserInfo()]).then(
       async (values: any) => {
         const nodeData = values[0];
